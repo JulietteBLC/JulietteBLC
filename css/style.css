@@ -1,6 +1,7 @@
 body {
     /*background-color: lightblue;*/
     background-image: url("arcenciel.jpg");
+    background-repeat: no-repeat;
 }
 h1 {
     color: blue;
