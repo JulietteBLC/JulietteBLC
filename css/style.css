@@ -1,6 +1,8 @@
 body {
     /*background-color: lightblue;*/
     background-image: url("arcenciel.jpg");
+    background-position: right top;
+    background-attachment: fixed;
 }
 h1 {
     color: blue;
