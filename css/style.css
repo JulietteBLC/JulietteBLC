@@ -3,7 +3,7 @@ head{
    }
 body {
     /*background-color: lightblue;*/
-    background-image: url("/css/arcenciel.jpg");
+    background-image: url("/arcenciel.jpg");
     background-position: right top;
     background-attachment: fixed;
 }
