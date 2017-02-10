@@ -8,13 +8,13 @@ body {
     background-attachment: fixed;
 }
 h1 {
-    color: red;
+    color: cyan;
     text-align: center;
     font-size: 50px;
     
 }
 p {
-    color: lightblue;
+    color: cyan;
     font-family:comic sans ms;
     font-size: 30px;
 }
