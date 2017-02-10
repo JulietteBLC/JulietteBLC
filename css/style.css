@@ -10,11 +10,12 @@ body {
 h1 {
     color: purple;
     text-align: center;
+    font-family:comic sans ms;
     font-size: 50px;
     
 }
 p {
-    color: cyan;
+    color: grey;
     font-family:comic sans ms;
     font-size: 30px;
 }
