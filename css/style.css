@@ -28,8 +28,7 @@ p {
 }
 a {
     color: hotpink;
+    padding: 14px 25px;
    
 }
-a:link {
-    background-color: yellow;
-}
+
