@@ -27,8 +27,8 @@ p {
     font-size: 23px;
 }
 a {
-    color: hotpink;
+    color: pink;
     padding: 14px 25px;
-   
+    text-align: center; 
 }
 
