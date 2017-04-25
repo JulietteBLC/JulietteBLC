@@ -16,3 +16,17 @@ function homePageLoading() {
 
     ...
 }
+
+  {
+      "version": 130000,
+    "protocolversion": 70014,
+    "blocks": 447078,
+    "timeoffset": 0,
+    "connections": 86,
+    "proxy": "",
+    "difficulty": 317688400354.0338,
+    "testnet": false,
+    "paytxfee": 0,
+    "relayfee": 0.00001,
+    "errors": ""
+}
