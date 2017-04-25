@@ -11,11 +11,17 @@ h1 {
     color: purple;
     text-align: center;
     font-family:comic sans ms;
-    font-size: 50px;
+    font-size: 40px;
     
+}
+h2{
+    color : grey;
+    text-align: center;
+    font-family: comic sans ms;
+    font-size: 30px;
 }
 p {
     color: grey;
     font-family:comic sans ms;
-    font-size: 30px;
+    font-size: 23px;
 }
