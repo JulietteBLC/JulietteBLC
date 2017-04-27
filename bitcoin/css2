@@ -1,5 +1,9 @@
-head 
-{
+head {
 <link rel="stylesheet"  media="all" type="text/css"  href="bitcoin/bitcoin.css2" />
 }
+
+ul {
+text-align:center;
+}
+
 
