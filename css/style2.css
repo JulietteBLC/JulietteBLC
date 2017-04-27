@@ -14,12 +14,7 @@ h1 {
     font-size: 40px;
     
 }
-h2{
-    color : grey;
-    text-align: center;
-    font-family: Century Schoolbook;
-    font-size: 30px;
-}
+
 p {
     text-align: center;
     color: black;
@@ -34,4 +29,5 @@ a {
 ul
 {
 text-align:center;
+color: yellow;
 }
