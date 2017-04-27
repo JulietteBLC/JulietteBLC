@@ -28,10 +28,15 @@ p {
 }
 a {
     color: black;
-    padding: 14px 25px;
+    padding: 25px 45px;
     text-align: center; 
+   
 }
 
+li {
+   text-align:center;
+   font-size:20
+}
 ul{
    text-align: center;
    font-size: 12px;
