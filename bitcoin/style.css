@@ -1,0 +1,33 @@
+head{
+<link rel="stylesheet"  media="all" type="text/css" 	href="bitcoin/style.css"   />
+}
+
+body {
+    /*background-color: lightblue;*/
+    background-image: url("/rose.jpg");
+    background-position: right top;
+    background-attachment: fixed;
+}
+h1 {
+    color: black;
+    text-align: center;
+    font-family:Century Schoolbook;
+    font-size: 40px;
+    
+}
+p {
+    text-align: center;
+    color: black;
+    font-family:Century Schoolbook;
+    font-size: 23px;
+}
+a {
+    color: black;
+    padding: 14px 25px;
+    text-align: center; 
+}
+
+ul{
+   text-align: center;
+   font-size: 12px;
+}
