@@ -1,0 +1,32 @@
+head 
+{
+       <link rel="stylesheet"    	media="all"	type="text/css" href="QR/QR.html"   />
+}
+body {
+    /*background-color: lightblue;*/
+    background-image: url("/rose.jpg");
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-family: Century Schoolbook;
+    font-size: 60px;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-family:Century Schoolbook;
+    font-size: 23px;
+}
+
+a {
+    color: black;
+    padding: 25px 45px;
+    font-size: 23px;
+    text-align: center; 
+    font-family:Century Schoolbook;
+}
