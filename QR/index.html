@@ -4,19 +4,40 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <title> Page </title>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="qrcode.js"></script>
 <ul class="nav nav-tabs">
-  <li class="active"><a href="https://JulietteBLC.github.io">Accueil</a></li>
+  <li><a href="https://JulietteBLC.github.io">Accueil</a></li>
   <li><a href="https://JulietteBLC.github.io/bitcoin/index.html">Bitcoins</a></li>
   <li><a href="https://JulietteBLC.github.io/bitcoin/explorer/index.html">Formulaire</a></li>
-  <li><a href="#">QRCode</a></li>
+  <li class="active"><a href="#">QRCode</a></li>
 </ul>	
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
    <link rel="stylesheet"    	media="all"	type="text/css" href="../css/style4.css"   />
 </head>
 
 <body>
+				
+		<div class=interieur>
 		
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<h1>Générateur de QRCode</h1>
+				<p> Voici un QRCode : </p>
+					<div>
+						<div id="qrcode"></div>
+						<script type="text/javascript">
+						var qrcode = new QRCode(document.getElementById("qrcode"), {
+							text: "http://base.io",
+							width: 128,
+							height: 128,
+							colorDark : "#000000 »,
+							colorLight : "#ffffff",
+							correctLevel : QRCode.CorrectLevel.H
+						});
+					</div>
+		</div>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="../custom.js"></script>
 </body>
