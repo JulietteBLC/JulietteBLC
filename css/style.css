@@ -2,7 +2,6 @@ head{
 <link rel="stylesheet"    		media="all"		type="text/css" 	href="css/style.css"   />
    }
 body {
-    /*background-color: lightblue;*/
     background-image: url("/rose.jpg");
     background-position: right top;
     background-attachment: fixed;
