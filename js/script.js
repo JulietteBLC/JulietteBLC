@@ -2,8 +2,6 @@ function homePageLoading() {
     url = 'apiUrl';
     elementID = 'idDeVotreElementHtml';
     fonctionRequeteApi(url, elementID);
-
-    ...
 }
     
     var xmlhttp = new XMLHttpRequest();
