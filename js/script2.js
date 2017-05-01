@@ -1,31 +1,8 @@
-/**
- * @fileoverview
- * - Using the 'QRCode for Javascript library'
- * - Fixed dataset of 'QRCode for Javascript library' for support full-spec.
- * - this library has no dependencies.
- * 
- * @author davidshimjs
- * @see <a href="http://www.d-project.com/" target="_blank">http://www.d-project.com/</a>
- * @see <a href="http://jeromeetienne.github.com/jquery-qrcode/" target="_blank">http://jeromeetienne.github.com/jquery-qrcode/</a>
- */
+
 var QRCode;
 
 (function () {
-	//---------------------------------------------------------------------
-	// QRCode for JavaScript
-	//
-	// Copyright (c) 2009 Kazuhiko Arase
-	//
-	// URL: http://www.d-project.com/
-	//
-	// Licensed under the MIT license:
-	//   http://www.opensource.org/licenses/mit-license.php
-	//
-	// The word "QR Code" is registered trademark of 
-	// DENSO WAVE INCORPORATED
-	//   http://www.denso-wave.com/qrcode/faqpatent-e.html
-	//
-	//---------------------------------------------------------------------
+	
 	function QR8bitByte(data) {
 		this.mode = QRMode.MODE_8BIT_BYTE;
 		this.data = data;
@@ -300,13 +277,7 @@ var QRCode;
 	    	};
 		}
 		
-		/**
-		 * Check whether the user's browser supports Data URI or not
-		 * 
-		 * @private
-		 * @param {Function} fSuccess Occurs if it supports Data URI
-		 * @param {Function} fFail Occurs if it doesn't support Data URI
-		 */
+		
 		function _safeSetDataURI(fSuccess, fFail) {
             var self = this;
             self._fFail = fFail;
@@ -342,13 +313,6 @@ var QRCode;
             }
 		};
 		
-		/**
-		 * Drawing QRCode by using canvas
-		 * 
-		 * @constructor
-		 * @param {HTMLElement} el
-		 * @param {Object} htOption QRCode Options 
-		 */
 		var Drawing = function (el, htOption) {
     		this._bIsPainted = false;
     		this._android = _getAndroid();
@@ -368,11 +332,7 @@ var QRCode;
 			this._bSupportDataURI = null;
 		};
 			
-		/**
-		 * Draw the QRCode
-		 * 
-		 * @param {QRCode} oQRCode 
-		 */
+		
 		Drawing.prototype.draw = function (oQRCode) {
             var _elImage = this._elImage;
             var _oContext = this._oContext;
@@ -426,27 +386,17 @@ var QRCode;
 			}
 		};
 			
-		/**
-		 * Return whether the QRCode is painted or not
-		 * 
-		 * @return {Boolean}
-		 */
+		
 		Drawing.prototype.isPainted = function () {
 			return this._bIsPainted;
 		};
 		
-		/**
-		 * Clear the QRCode
-		 */
 		Drawing.prototype.clear = function () {
 			this._oContext.clearRect(0, 0, this._elCanvas.width, this._elCanvas.height);
 			this._bIsPainted = false;
 		};
 		
-		/**
-		 * @private
-		 * @param {Number} nNumber
-		 */
+		
 		Drawing.prototype.round = function (nNumber) {
 			if (!nNumber) {
 				return nNumber;
@@ -458,14 +408,7 @@ var QRCode;
 		return Drawing;
 	})();
 	
-	/**
-	 * Get the type by string length
-	 * 
-	 * @private
-	 * @param {String} sText
-	 * @param {Number} nCorrectLevel
-	 * @return {Number} type
-	 */
+	
 	function _getTypeNumber(sText, nCorrectLevel) {			
 		var nType = 1;
 		var length = _getUTF8Length(sText);
@@ -507,31 +450,7 @@ var QRCode;
 		return replacedText.length + (replacedText.length != sText ? 3 : 0);
 	}
 	
-	/**
-	 * @class QRCode
-	 * @constructor
-	 * @example 
-	 * new QRCode(document.getElementById("test"), "http://jindo.dev.naver.com/collie");
-	 *
-	 * @example
-	 * var oQRCode = new QRCode("test", {
-	 *    text : "http://naver.com",
-	 *    width : 128,
-	 *    height : 128
-	 * });
-	 * 
-	 * oQRCode.clear(); // Clear the QRCode.
-	 * oQRCode.makeCode("http://map.naver.com"); // Re-create the QRCode.
-	 *
-	 * @param {HTMLElement|String} el target element or 'id' attribute of element.
-	 * @param {Object|String} vOption
-	 * @param {String} vOption.text QRCode link data
-	 * @param {Number} [vOption.width=256]
-	 * @param {Number} [vOption.height=256]
-	 * @param {String} [vOption.colorDark="#000000"]
-	 * @param {String} [vOption.colorLight="#ffffff"]
-	 * @param {QRCode.CorrectLevel} [vOption.correctLevel=QRCode.CorrectLevel.H] [L|M|Q|H] 
-	 */
+	
 	QRCode = function (el, vOption) {
 		this._htOption = {
 			width : 256, 
@@ -573,11 +492,7 @@ var QRCode;
 		}
 	};
 	
-	/**
-	 * Make the QRCode
-	 * 
-	 * @param {String} sText link data
-	 */
+	
 	QRCode.prototype.makeCode = function (sText) {
 		this._oQRCode = new QRCodeModel(_getTypeNumber(sText, this._htOption.correctLevel), this._htOption.correctLevel);
 		this._oQRCode.addData(sText);
@@ -587,29 +502,18 @@ var QRCode;
 		this.makeImage();
 	};
 	
-	/**
-	 * Make the Image from Canvas element
-	 * - It occurs automatically
-	 * - Android below 3 doesn't support Data-URI spec.
-	 * 
-	 * @private
-	 */
 	QRCode.prototype.makeImage = function () {
 		if (typeof this._oDrawing.makeImage == "function" && (!this._android || this._android >= 3)) {
 			this._oDrawing.makeImage();
 		}
 	};
 	
-	/**
-	 * Clear the QRCode
-	 */
+	
 	QRCode.prototype.clear = function () {
 		this._oDrawing.clear();
 	};
 	
-	/**
-	 * @name QRCode.CorrectLevel
-	 */
+	
 	QRCode.CorrectLevel = QRErrorCorrectLevel;
 })();
 
